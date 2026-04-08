@@ -1,19 +1,17 @@
-package com.krishna.Metric_Producer.model;
+package com.krishna.Incident_Service.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class MetricEvent {
+
     private String serviceName;
     private long timestamp;
     private double errorRate;
     private double avgLatency;
     private int requestCount;
     
+	public MetricEvent() {
+		super();
+	}
+	
 	public MetricEvent(String serviceName, long timestamp, double errorRate, double avgLatency, int requestCount) {
 		super();
 		this.serviceName = serviceName;
@@ -52,4 +50,6 @@ public class MetricEvent {
 	public void setRequestCount(int requestCount) {
 		this.requestCount = requestCount;
 	}
+    
+    
 }

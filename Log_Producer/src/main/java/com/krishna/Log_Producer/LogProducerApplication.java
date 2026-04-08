@@ -1,4 +1,4 @@
-package com.krishna.Metric_Producer;
+package com.krishna.Log_Producer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,9 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
-public class MetricProducerApplication {
+public class LogProducerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MetricProducerApplication.class, args);	
+        SpringApplication.run(LogProducerApplication.class, args);
     }
-
 }
