@@ -13,7 +13,7 @@ public interface LogRepository extends ElasticsearchRepository<LogEvent, String>
 			{
 			  "bool": {
 			    "must": [
-			      { "match": { "serviceName": "?0" }},
+			      { "term": { "serviceName.keyword": "?0" }},
 			      {
 			        "range": {
 			          "timestamp": {
@@ -27,8 +27,8 @@ public interface LogRepository extends ElasticsearchRepository<LogEvent, String>
 			}
 			""")
 			List<LogEvent> findLogsByServiceAndTimeRange(
-			        String serviceName,
-			        long start,
-			        long end
+			    String serviceName,
+			    long start,
+			    long end
 			);
 }

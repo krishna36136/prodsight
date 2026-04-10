@@ -3,6 +3,7 @@ package com.krishna.Incident_Query_Service.controller;
 import java.util.List;
 
 import org.springframework.data.domain.Page;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,7 @@ import com.krishna.Incident_Query_Service.service.IncidentService;
 
 @RestController
 @RequestMapping("/incidents")
+@CrossOrigin(origins = "*")
 public class IncidentController {
 
     private final IncidentService incidentService;
